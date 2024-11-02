@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Design System</title>
+    <style>
+        /*
+        * Das vorliegende Design System demonstriert die grundlegende Struktur und Komponenten und nicht meine Geschmack.
+        */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #4b5563;
+            --success: #059669;
+            --danger: #dc2626;
+            --warning: #d97706;
+            --light: #f3f4f6;
+            --dark: #1f2937;
+            --white: #ffffff;
+
+            --font-main: system-ui, -apple-system, sans-serif;
+            --spacing-base: 1rem;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--dark);
+            padding: 2rem;
+            background-color: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: var(--secondary);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-success {
+            background-color: var(--success);
+            color: var(--white);
+        }
+
+        .btn-danger {
+            background-color: var(--danger);
+            color: var(--white);
+        }
+
+        .btn-warning {
+            background-color: var(--warning);
+            color: var(--white);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-primary {
+            background-color: #dbeafe;
+            color: var(--primary-dark);
+            border: 1px solid #bfdbfe;
+        }
+
+        .alert-success {
+            background-color: #dcfce7;
+            color: var(--success);
+            border: 1px solid #bbf7d0;
+        }
+
+        .alert-danger {
+            background-color: #fee2e2;
+            color: var(--danger);
+            border: 1px solid #fecaca;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .badge-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .badge-secondary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .mb-2 { margin-bottom: 0.5rem; }
+
+        .component-demo {
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 1px solid var(--light);
+            border-radius: 6px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Design System</h1>
+
+    <section class="section">
+        <h2>Typografie</h2>
+        <h1>Überschrift 1</h1>
+        <h2>Überschrift 2</h2>
+        <h3>Überschrift 3</h3>
+        <p>Dies ist ein Beispiel für regulären Fließtext. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><strong>Fett gedruckter Text</strong> und <em>kursiver Text</em> für besondere Hervorhebungen.</p>
+    </section>
+
+    <section class="section">
+        <h2>Buttons & Farben</h2>
+        <div class="component-demo">
+            <button class="btn btn-primary mb-2">Primary Button</button>
+            <button class="btn btn-secondary mb-2">Secondary Button</button>
+            <button class="btn btn-success mb-2">Success Button</button>
+            <button class="btn btn-danger mb-2">Danger Button</button>
+            <button class="btn btn-warning mb-2">Warning Button</button>
+            <button class="btn btn-outline mb-2">Outline Button</button>
+        </div>
+
+        <h3>Button Größen</h3>
+        <div class="component-demo">
+            <button class="btn btn-primary btn-sm mb-2">Small Button</button>
+            <button class="btn btn-primary mb-2">Regular Button</button>
+            <button class="btn btn-primary btn-lg mb-2">Large Button</button>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Formulare</h2>
+        <form>
+            <div class="form-group">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" placeholder="Ihr Name">
+            </div>
+            <div class="form-group">
+                <label class="form-label">E-Mail</label>
+                <input type="email" class="form-control" placeholder="ihre@email.com">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Nachricht</label>
+                <textarea class="form-control" rows="4" placeholder="Ihre Nachricht"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Absenden</button>
+        </form>
+    </section>
+
+    <section class="section">
+        <h2>Alerts</h2>
+        <div class="alert alert-primary">Dies ist eine primäre Benachrichtigung.</div>
+        <div class="alert alert-success">Dies ist eine Erfolgs-Benachrichtigung.</div>
+        <div class="alert alert-danger">Dies ist eine Fehler-Benachrichtigung.</div>
+    </section>
+
+    <section class="section">
+        <h2>Badges</h2>
+        <span class="badge badge-primary">Neu</span>
+        <span class="badge badge-secondary">Version 2.0</span>
+    </section>
+
+</div>
+</body>
+</html>
